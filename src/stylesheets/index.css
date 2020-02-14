@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #3c3c3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 900px;
+}
+
+.app-container {
+    width: 60vw;
+    padding: 10px;
+    border: 2px solid blue;
+}
+
+input[type=radio] {
+    position: relative;
+}
+
+
+input[type=radio]:before {
+    display: none;
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 2px solid blue;
+    top: 0;
+    left: -7px;
+}
+
+input[type=radio]:checked::before {
+     display: block;
+}
+
+input[type=radio]:checked + label {
+    color: blue;
+}
+
+ label {
+     color: #ffffff;
+     font-weight: bold;
+     margin-left: 5px;
+ }
+
+ .amount > input {
+     outline: none;
+     padding: 5px;
+     border: none;
+     border-bottom: 2px solid blue;
+     background: transparent;
+     color: blue;
+     font-weight: bold;
+ }
+
+.amount > input:hover {
+    cursor: pointer;
+}
+
+.timeSelectors > div {
+    margin-top: 20px;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+input[type=checkbox]:hover {
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked ~ label {
+    color: blue;
+}
+
+.rates {
+    margin-top: 20px;
+    width: 70%;
+}
+
+.rates > div {
+    border-bottom: 2px solid blue;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
